@@ -61,7 +61,7 @@ if [ -z "$ES_NODE_NAME" ]; then
     exit 1
 fi
 
-# 检查服务器上是否存在unzip
+# 检查服务器上是否安装unzip
 if [ ! -f /usr/bin/unzip ]; then
     echo "当前服务器无unzip, 需要先安装"
     exit 1
