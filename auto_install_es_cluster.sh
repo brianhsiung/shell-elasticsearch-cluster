@@ -150,7 +150,8 @@ function install_elasticsearch {
     echo "解压elasticsearch-$ES_VERSION-linux-x86_64.tar.gz && elasticsearch-analysis-ik-$ES_VERSION.zip"
     tar -zxf elasticsearch-$ES_VERSION-linux-x86_64.tar.gz
     unzip elasticsearch-analysis-ik-$ES_VERSION.zip -d $ES_HOME/plugins/analysis-ik &> /dev/null
-    chown $ES_USER -R $DIR
+    
+    chown $ES_USER -R $ES_HOME $ES_DATA $ES_LOG
 
     # 设置ES_JAVA_OPTS
     sed -i -e "s/-Xms1g/-Xms$ES_JAVA_OPTS/g" -e "s/-Xmx1g/-Xmx$ES_JAVA_OPTS/g" $ES_HOME/config/jvm.options
