@@ -1,6 +1,9 @@
 # shell-elasticsearch-cluster
 
 #### 介绍
+
+> 服务器: CentOS Linux release 7.5.1804 (Core)
+
 > 一键部署三节点ES Cluster，版本为7.4.0，如果版本不是7.4.0，则需要修改 `ES_VERSION` ,下载地址：https://www.elastic.co/cn/downloads/past-releases#elasticsearch
 
 > 根据实际情况修改 `ES_IP_LIST`，`ES_JAVA_OPTS` ，ES Cluster默认安装目录与脚本一致，可根据情况定义 `ES_DATA`, `ES_LOG` 目录
